@@ -1,9 +1,10 @@
 var React = require('react-native');
-var { StyleSheet, requireNativeComponent, PropTypes, NativeModules, DeviceEventEmitter } = React;
+var { StyleSheet, requireNativeComponent, PropTypes, NativeModules, DeviceEventEmitter,View } = React;
 
 var CAMERA_REF = 'camera';
 
 var constants = {
+  ...View.propTypes,
   Aspect: NativeModules.CameraManager.Aspect,
   BarCodeType: NativeModules.CameraManager.BarCodeType,
   Type: NativeModules.CameraManager.Type,
